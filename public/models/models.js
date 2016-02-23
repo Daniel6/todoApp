@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/TodoDatabase');
+mongoose.connect(process.env.MONGOURI || 'mongodb://localhost/TodoDatabase');
 
 //Schema
 var todoSchema = mongoose.Schema({
